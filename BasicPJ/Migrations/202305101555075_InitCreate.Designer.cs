@@ -13,7 +13,7 @@ namespace BasicPJ.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202305061511487_InitCreate"; }
+            get { return "202305101555075_InitCreate"; }
         }
         
         string IMigrationMetadata.Source

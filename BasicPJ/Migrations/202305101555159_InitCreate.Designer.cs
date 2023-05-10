@@ -7,13 +7,13 @@ namespace BasicPJ.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class CreateTableProduct : IMigrationMetadata
+    public sealed partial class InitCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateTableProduct));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202305070545111_CreateTableProduct"; }
+            get { return "202305101555159_InitCreate"; }
         }
         
         string IMigrationMetadata.Source

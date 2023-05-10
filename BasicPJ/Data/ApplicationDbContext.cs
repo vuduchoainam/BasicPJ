@@ -29,5 +29,6 @@ namespace BasicPJ.Data
             base.OnModelCreating(builder);
         }
 
+        public System.Data.Entity.DbSet<BasicPJ.Models.Role> IdentityRoles { get; set; }
     }
 }
