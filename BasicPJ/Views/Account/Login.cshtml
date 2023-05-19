@@ -1,164 +1,132 @@
-﻿@{
+﻿@model BasicPJ.Data.ApplicationUser
+
+@{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<section>
-    <div class="form-box">
-        <div class="form-value">
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
-                <div class="form-horizontal">
-                    <h2>ĐĂNG NHẬP</h2>
-                    @*@Html.Partial("ErrorsAlert")*@
-                    <div class="inputbox form-group">
-                        <ion-icon name="person-outline"></ion-icon>
-                        <input type="text" required placeholder="Tên đăng nhập" name="UserName" id="UserName">
-                    </div>
-                    <div class="inputbox form-group">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required placeholder="Mật khẩu" name="PassWord" id="PassWord">
-                    </div>
-                    <div class="forget">
-                        <label for="">
-                            <input type="checkbox" style="color:white">Ghi Nhớ
-                        </label>
-                    </div>
-                    <button class="form-group" style="color:white" type="submit" value="Login">Đăng Nhập</button>
-                </div>
-            }
-            <div class="forget">
-                <label for="">
-                    <a href="#" style="text-align:center"><br />Quên Mật Khẩu ?</a>
-                </label>
+
+<h2>Login</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ApplicationUser</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
             </div>
-            <div class="register">
-                <p>Bạn chưa có tài khoản? <a href="@Url.Action("Register", "Account")">Đăng ký ngay</a></p>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmailConfirmed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.EmailConfirmed)
+                    @Html.ValidationMessageFor(model => model.EmailConfirmed, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PasswordHash, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PasswordHash, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PasswordHash, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SecurityStamp, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SecurityStamp, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SecurityStamp, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PhoneNumberConfirmed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.PhoneNumberConfirmed)
+                    @Html.ValidationMessageFor(model => model.PhoneNumberConfirmed, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TwoFactorEnabled, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.TwoFactorEnabled)
+                    @Html.ValidationMessageFor(model => model.TwoFactorEnabled, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LockoutEndDateUtc, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LockoutEndDateUtc, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LockoutEndDateUtc, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LockoutEnabled, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.LockoutEnabled)
+                    @Html.ValidationMessageFor(model => model.LockoutEnabled, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AccessFailedCount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AccessFailedCount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AccessFailedCount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
-</section>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
+}
 
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        opacity: 0.6;
-    }
-
-    .form-box {
-        position: relative;
-        width: 420px;
-        height: 580px;
-        border: 2px solid #000;
-        border-radius: 20px;
-        backdrop-filter: blur(15px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    h2 {
-        font-size: 2em;
-        color: #000;
-        text-align: center;
-    }
-
-    .inputbox {
-        position: relative;
-        margin: 30px 0;
-        width: 310px;
-        border-bottom: 2px solid #000;
-    }
-
-        .inputbox label {
-            position: absolute;
-            top: 50%;
-            left: 5px;
-            transform: translateY(-50%);
-            color: #000;
-            font-size: 1em;
-            pointer-events: none;
-            transition: .5s;
-        }
-
-        .inputbox input {
-            width: 100%;
-            height: 50px;
-            background: transparent;
-            border: none;
-            outline: none;
-            font-size: 1em;
-            padding: 0 35px 0 5px;
-            color: #000;
-        }
-
-        .inputbox ion-icon {
-            position: absolute;
-            right: 8px;
-            color: #000;
-            font-size: 1.2em;
-            top: 20px;
-        }
-
-    .forget {
-        margin: -15px 0 15px;
-        font-size: .9em;
-        color: #000;
-        display: flex;
-        justify-content: space-between;
-    }
-
-        .forget label input {
-            margin-right: 3px;
-        }
-
-        .forget label a {
-            color: #000;
-            text-decoration: none;
-        }
-
-            .forget label a:hover {
-                text-decoration: underline;
-            }
-
-    button {
-        width: 100%;
-        height: 40px;
-        border-radius: 40px;
-        background: #000;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        font-size: 1em;
-        font-weight: 600;
-    }
-
-    .register {
-        font-size: .9em;
-        color: #000;
-        text-align: center;
-        margin: 25px 0 10px;
-    }
-
-        .register p a {
-            text-decoration: none;
-            color: #000;
-            font-weight: 600;
-        }
-
-            .register p a:hover {
-                text-decoration: underline;
-            }
-</style>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

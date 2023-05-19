@@ -27,24 +27,24 @@ namespace BasicPJ.Controllers
         {
             return View();
         }
-        public static bool ValidateVNPhoneNumber(string phoneNumber) // check đầu số VN
+        public static bool ValidateVNPhoneNumber(string phoneNumber)
         {
             phoneNumber = phoneNumber.Replace("+84", "0");
             Regex regex = new Regex(@"^(0)(86|96|97|98|32|33|34|35|36|37|38|39|91|94|83|84|85|81|82|90|93|70|79|77|76|78|92|56|58|99|59|55|87)\d{7}$");
             return regex.IsMatch(phoneNumber);
         }
-        public bool ValidateEmail(string email) //check kí tự mail
+        public bool ValidateEmail(string email)
         {
             Regex regex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
             return regex.IsMatch(email);
         }
-        public bool ValidatePassword(string password)   //check pass
+        public bool ValidatePassword(string password)
         {
             Regex regex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$");
             return regex.IsMatch(password);
         }
         [HttpPost]
-        public ActionResult Register(FormCollection formCollection) //đăng kí
+        public ActionResult Register(FormCollection formCollection)
         {
             List<string> errors = new List<string>();
             try
@@ -75,7 +75,7 @@ namespace BasicPJ.Controllers
                 }
                 if (ValidatePassword(Password) == false)
                 {
-                    errors.Add("Mật khẩu ít nhất 8 kí tự (Có 1 chữ hoa + thường + số + kí tự đặc biệt");
+                    errors.Add("Mật khẩu ít nhất 8 kí tự");
                 }
                 if (ValidateEmail(Email) == false)
                 {
@@ -121,7 +121,7 @@ namespace BasicPJ.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(FormCollection formCollection)    //Đăng nhập
+        public ActionResult Login(FormCollection formCollection)
         {
             List<string> errors = new List<string>();
             try
@@ -152,7 +152,7 @@ namespace BasicPJ.Controllers
             TempData["Errors"] = errors;
             return View();
         }
-        public ActionResult Logout()    // đăng xuất
+        public ActionResult Logout()
         {
             var AuthenticationManager = HttpContext.GetOwinContext().Authentication;
             AuthenticationManager.SignOut();
