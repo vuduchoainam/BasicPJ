@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace BasicPJ.Areas.Areas.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class ManageUserController : BaseController<ApplicationUser>
     {
         // GET: Admin/ManageUser
