@@ -157,6 +157,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Areas\AreasAreaRegistration.cs" />
+    <Compile Include="Areas\Areas\Controllers\ManageCategoryController.cs" />
+    <Compile Include="Areas\Areas\Controllers\ManageOptionProductController.cs" />
+    <Compile Include="Areas\Areas\Controllers\ManageProductController.cs" />
+    <Compile Include="Areas\Areas\Controllers\ManagePropertyProductController.cs" />
     <Compile Include="Areas\Areas\Controllers\ManageRoleController.cs" />
     <Compile Include="Areas\Areas\Controllers\ManageUserController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -198,10 +202,41 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\validate.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\home.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\salad-ca-hoi.jpg" />
+    <Content Include="Content\images\salad-ca-ngu-ngam-giam.jpg" />
+    <Content Include="Content\img\banner_bg_desktop.jpg" />
+    <Content Include="Content\img\bg_call_section.jpg" />
+    <Content Include="Content\img\cards_all.svg" />
+    <Content Include="Content\img\facebook_icon.svg" />
+    <Content Include="Content\img\home_section_1.jpg" />
+    <Content Include="Content\img\instagram_icon.svg" />
+    <Content Include="Content\img\lazy-placeholder.png" />
+    <Content Include="Content\img\location_1.jpg" />
+    <Content Include="Content\img\location_2.jpg" />
+    <Content Include="Content\img\location_3.jpg" />
+    <Content Include="Content\img\location_4.jpg" />
+    <Content Include="Content\img\location_list_1.jpg" />
+    <Content Include="Content\img\location_list_2.jpg" />
+    <Content Include="Content\img\location_list_3.jpg" />
+    <Content Include="Content\img\location_list_4.jpg" />
+    <Content Include="Content\img\location_list_5.jpg" />
+    <Content Include="Content\img\location_list_6.jpg" />
+    <Content Include="Content\img\logo.svg" />
+    <Content Include="Content\img\logo_sticky.svg" />
+    <Content Include="Content\img\twitter_icon.svg" />
+    <Content Include="Content\img\youtube_icon.svg" />
+    <Content Include="Content\js\common_func.js" />
+    <Content Include="Content\js\common_scripts.min.js" />
+    <Content Include="Content\js\index.html" />
+    <Content Include="Content\js\switcher.js" />
     <Content Include="Content\Layout\Admin\dist\css\adminlte.css" />
     <Content Include="Content\Layout\Admin\dist\css\adminlte.min.css" />
     <Content Include="Content\Layout\Admin\dist\css\alt\adminlte.components.css" />
@@ -2128,6 +2163,7 @@
     <Content Include="Content\Layout\Admin\plugins\uplot\uPlot.iife.js" />
     <Content Include="Content\Layout\Admin\plugins\uplot\uPlot.iife.min.js" />
     <Content Include="Content\Layout\Admin\plugins\uplot\uPlot.min.css" />
+    <Content Include="detail-restaurant.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2277,6 +2313,14 @@
     <Content Include="Content\Layout\Admin\plugins\summernote\summernote.js.map" />
     <Content Include="Content\Layout\Admin\plugins\summernote\summernote.min.js.map" />
     <Content Include="Content\Layout\Admin\plugins\toastr\toastr.js.map" />
+    <Content Include="Areas\Areas\Views\ManageCategory\Index.cshtml" />
+    <Content Include="Areas\Areas\Views\ManageCategory\Edit.cshtml" />
+    <Content Include="Areas\Areas\Views\ManageProduct\Index.cshtml" />
+    <Content Include="Areas\Areas\Views\ManageProduct\Edit.cshtml" />
+    <Content Include="Areas\Areas\Views\ManageOptionProduct\Index.cshtml" />
+    <Content Include="Areas\Areas\Views\ManageOptionProduct\Edit.cshtml" />
+    <Content Include="Areas\Areas\Views\ManagePropertyProduct\Index.cshtml" />
+    <Content Include="Areas\Areas\Views\ManagePropertyProduct\Edit.cshtml" />
     <None Include="Scripts\jquery-3.6.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -2304,8 +2348,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\ManageRole\Create.cshtml" />
     <Content Include="Views\ManageRole\Delete.cshtml" />
     <Content Include="Views\ManageRole\Details.cshtml" />
@@ -2313,10 +2355,14 @@
     <Content Include="Views\ManageRole\Index.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Shared\_Layout_Admin.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\ErrorsAlert.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Areas\Data\" />
+    <Folder Include="Areas\Areas\Views\AdminAreaRegistration\" />
     <Folder Include="Areas\Areas\Views\Shared\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Image\" />

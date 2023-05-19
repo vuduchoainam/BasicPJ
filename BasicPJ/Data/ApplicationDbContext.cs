@@ -30,5 +30,10 @@ namespace BasicPJ.Data
         }
 
         public System.Data.Entity.DbSet<BasicPJ.Models.Role> IdentityRoles { get; set; }
+
+        //public System.Data.Entity.DbSet<BasicPJ.Data.ApplicationUser> ApplicationUsers { get; set; }
+        //public System.Data.Entity.DbSet<BasicPJ.Data.ApplicationUser> IdentityUsers { get; set; } mở commend = cúc
+
+
     }
 }
