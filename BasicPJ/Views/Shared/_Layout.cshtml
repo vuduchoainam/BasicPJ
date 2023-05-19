@@ -1,553 +1,335 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - HONASTEAK</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HONASTEAK - Discover & Book the best restaurants at the best price">
+    <meta name="author" content="Ansonika">
+    <title>HONASTEAK - Discover & Book the best restaurants at the best price</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- BASE CSS -->
+    <link rel="preload" href="~/Content/css/bootstrap.min.css" as="style">
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="~/Content/css/style.css" as="style">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+
+    <!-- SPECIFIC CSS -->
+    <link rel="preload" href="~/Content/css/home.css" as="style">
+    <link href="~/Content/css/home.css" rel="stylesheet">
+
+    <!-- ALTERNATIVE COLORS CSS -->
+    <link href="#" id="colors" rel="stylesheet">
+
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-        <div class="public-header">
-            <div class="public-container clearfloat">
-                <div class="header-logo"><a href="#"></a></div>
-                <ul class="header-nav clearfloat">
-                    <li class="item">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li class="item">@Html.ActionLink("Category", "Index", "Category", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li class="item">@Html.ActionLink("Menu", "Index", "Product", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li class="item"><a href="#">News</a></li>
-                    <li class="item"><a href="#">Rviews</a></li>
+
+    <header class="header clearfix element_to_stick">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" width="140" height="35" alt="" class="logo_normal">
+                    <img src="img/logo_sticky.svg" width="140" height="35" alt="" class="logo_sticky">
+                </a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li>
+                <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+            </ul>
+            <!-- /top_menu -->
+            <a href="#0" class="open_close">
+                <i class="icon_menu"></i><span>Menu</span>
+            </a>
+            <nav class="main-menu">
+                <div id="header_menu">
+                    <a href="#0" class="open_close">
+                        <i class="icon_close"></i><span>Menu</span>
+                    </a>
+                    <a href="index.html"><img src="~/Content/img/logo.svg" width="140" height="35" alt=""></a>
+                </div>
+                <ul>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Home</a>
+                        <ul>
+                            <li><a href="index.html">Default</a></li>
+                            <li class="third-level">
+                                <a href="#0">Sliders - Parallax <strong>New!</strong></a>
+                                <ul>
+                                    <li><a href="index-8.html">Revolution Slider 1</a></li>
+                                    <li><a href="index-9.html">Revolution Slider 2</a></li>
+                                    <li><a href="index-3.html">Owl Carousel</a></li>
+                                    <li><a href="index-10.html">Parallax Youtube</a></li>
+                                    <li><a href="index-11.html">Parallax Vimeo</a></li>
+                                    <li><a href="index-12.html">Parallax Mp4 Video</a></li>
+                                    <li><a href="index-13.html">Parallax Video Fullscreen</a></li>
+                                    <li><a href="index-14.html">Parallax Image</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index-16.html">Kenburns slider <strong>New!</strong></a></li>
+                            <li><a href="index-15.html">Text Rotator</a></li>
+                            <li><a href="index-5.html">Address Autocomplete</a></li>
+                            <li><a href="index-6.html">Search Version 2</a></li>
+                            <li><a href="index-7.html">Delivery/Takeaway version</a></li>
+                            <li><a href="modal-advertise.html">Modal Advertise</a></li>
+                            <li><a href="modal-newsletter.html">Modal Newsletter</a></li>
+                            <li><a href="index-2.html">Video Bg Fallback Mobile</a></li>
+                            <li><a href="index-4.html">GDPR Cookie Bar EU Law</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Listing</a>
+                        <ul>
+                            <li class="third-level">
+                                <a href="#0">List pages</a>
+                                <ul>
+                                    <li><a href="grid-listing-filterscol.html">List default</a></li>
+                                    <li><a href="grid-listing-filterscol-map.html">List with map</a></li>
+                                    <li><a href="listing-map.html">List side map</a></li>
+                                    <li><a href="grid-listing-filterscol-full-width.html">List full width</a></li>
+                                    <li><a href="grid-listing-filterscol-full-masonry.html">List Masonry Filter</a></li>
+                                    <li><a href="grid-listing-filterscol-delivery.html">List Delivery/Takeaway</a></li>
+                                </ul>
+                            </li>
+                            <li class="third-level">
+                                <a href="#0">Detail pages</a>
+                                <ul>
+                                    <li><a href="detail-restaurant.html">Detail page 1</a></li>
+                                    <li><a href="detail-restaurant-2.html">Detail page 2</a></li>
+                                    <li><a href="detail-restaurant-3.html">Mobile Fixed Booking</a></li>
+                                    <li><a href="detail-restaurant-delivery.html">Delivery/Takeaway</a></li>
+                                    <li><a href="detail-restaurant-4.html">Detail Menu Thumbs</a></li>
+                                    <li><a href="detail-restaurant-5.html">Detail Contact Form</a></li>
+                                </ul>
+                            </li>
+                            <li class="third-level">
+                                <a href="#0">OpenStreetMap</a>
+                                <ul>
+                                    <li><a href="grid-listing-filterscol-map-openstreetmap.html">List with map</a></li>
+                                    <li><a href="listing-map-openstreetmap.html">List side map</a></li>
+                                    <li><a href="grid-listing-filterscol-full-width-openstreetmap.html">List full width</a></li>
+                                    <li><a href="grid-listing-filterscol-full-masonry-openstreetmap.html">List Masonry Filter</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="submit-restaurant.html">Submit Restaurant</a></li>
+                            <li><a href="submit-rider.html">Submit Rider</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="confirm.html">Confirm Booking</a></li>
+                            <li><a href="confirm-delivery.html">Confirm Order</a></li>
+                            <li><a href="booking-delivery-2.html">Order Delivery/Takeaway</a></li>
+                            <li><a href="booking-delivery.html">Order Delivery/Takeaway 2</a></li>
+                            <li><a href="admin_section/index.html" target="_blank">Admin Section</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Other Pages</a>
+                        <ul>
+                            <li><a href="html_rtl/index.html">RLT Version <strong>New!</strong></a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="help.html">Help and Faq</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="leave-review.html">Leave a review</a></li>
+                            <li><a href="user-logged-1.html">User Logged 1</a></li>
+                            <li><a href="user-logged-2.html">User Logged 2</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="coming_soon/index.html">Coming Soon</a></li>
+                            <li><a href="account.html">Sign Up</a></li>
+                            <li><a href="icon-pack-1.html">Icon Pack 1</a></li>
+                            <li><a href="icon-pack-2.html">Icon Pack 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="submit-restaurant.html">Submit</a></li>
+                    <li><a href="https://1.envato.market/dA652" target="_parent">Buy this template</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
-        <div class="index-banner">
-            <div class="index-banner-bg"><img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/banner.jpg?raw=true" alt="banner" /></div>
-            <div class="index-banner-text">
-                <div class="text-logo"></div>
-                <p class="text-info">
-                    <i class="line line-left"></i>
-                    <span class="text">resto restaurant home page website template</span><i class="line line-right"></i>
-                </p>
-            </div>
-        </div>
-    </nav>
+    </header>
+    <!-- /header -->
     <div class="container body-content">
         @RenderBody()
-        @*<div class="index-menu">
-                <div class="menu-tips">The Menu</div>
-                <div class="public-container  menu-list">
-                    <ul class="clearfloat">
-                        <li class="menu-item clearfloat">
-                            <a class="title">
-                                <h4>Voluptate cillum fugiat.</h4>
-                                <p class="comment">Cheese, tomato, mushrooms, onions.</p>
-                            </a>
-                            <div class="line"></div>
-                            <div class="price"></div>
-                        </li>
-                        <li class="menu-item clearfloat">
-                            <a class="title">
-                                <h4>Arcu pede enim justo.</h4>
-                                <p class="comment">Arcu pede enim justo.</p>
-                            </a>
-                            <div class="line"></div>
-                            <div class="price"></div>
-                        </li>
-                        <li class="menu-item clearfloat">
-                            <a class="title">
-                                <h4>Metus varius laoreet.</h4>
-                                <p class="comment">Chicken, mozzarella cheese, onions.</p>
-                            </a>
-                            <div class="line"></div>
-                            <div class="price"></div>
-                        </li>
-                        <li class="menu-item clearfloat">
-                            <a class="title">
-                                <h4>Cras dapibussemper nisi.</h4>
-                                <p class="comment">Pineapple, Minced Beef, Cheese.</p>
-                            </a>
-                            <div class="line"></div>
-                            <div class="price"></div>
-                        </li>
-                        <li class="menu-item clearfloat">
-                            <a class="title">
-                                <h4>Donec sodales magna.</h4>
-                                <p class="comment">Tuna, Sweetcorn, Cheese.</p>
-                            </a>
-                            <div class="line"></div>
-                            <div class="price"></div>
-                        </li>
-                        <li class="menu-item clearfloat">
-                            <a class="title">
-                                <h4>Quam semper libero.</h4>
-                                <p class="comment">Cheese, tomato, mushrooms, onions.</p>
-                            </a>
-                            <div class="line"></div>
-                            <div class="price"></div>
-                        </li>
-                        <li class="menu-item clearfloat">
-                            <a class="title">
-                                <h4>Saugue velit cursus.</h4>
-                                <p class="comment">Pineapple, Minced Beef, Cheese.</p>
-                            </a>
-                            <div class="line"></div>
-                            <div class="price"></div>
-                        </li>
-                        <li class="menu-item clearfloat">
-                            <a class="title">
-                                <h4>Nam eget dui Etiam.</h4>
-                                <p class="comment">Chicken, mozzarella cheese, onions.</p>
-                            </a>
-                            <div class="line"></div>
-                            <div class="price"></div>
-                        </li>
-                    </ul>
-                </div>
-                <a href="#" class="menu-more-btn">load more <span>|</span><span class="icon"></span></a>
-            </div>
-            <div class="index-panel">
-                <div class="inedx-panel-header clearfloat">
-                    <h3>FEATURED DISHES</h3>
-                    <div class="line"></div>
-                    <div class="btn-group">
-                        <a href="#" class="btn active"></a>
-                        <a href="#" class="btn"></a>
-                        <a href="#" class="btn"></a>
-                        <a href="#" class="btn"></a>
-                    </div>
-                </div>
-                <div class="index-panel-body index-food-list">
-                    <ul class="clearfloat">
-                        <li class="food-item">
-                            <a href="#">
-                                <img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/panel01.jpg?raw=true" class="banner" alt="">
-                                <div class="name"><span class="price">$30</span>Fugiat nulla sint</div>
-                                <div class="star-bar">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star no-star"></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="food-item">
-                            <a href="#">
-                                <img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/panel02.jpg?raw=true" alt="" class="banner">
-                                <div class="name"><span class="price">$24</span>Daute irure dolor</div>
-                                <div class="star-bar">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star no-star"></span>
-                                    <span class="star no-star"></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="food-item">
-                            <a href="#">
-                                <img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/panel03.jpg?raw=true" alt="" class="banner">
-                                <div class="name"><span class="price">$60</span>Officia deserunt mollit</div>
-                                <div class="star-bar">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="food-item">
-                            <a href="#">
-                                <img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/panel04.jpg?raw=true" alt="" class="banner">
-                                <div class="name"><span class="price">$17</span>Pim minim veniam</div>
-                                <div class="star-bar">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star  no-star"></span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="index-panel">
-                <div class="inedx-panel-header clearfloat">
-                    <h3>THE GALLERY</h3>
-                    <div class="line"></div>
-                </div>
-                <div class="index-panel-body index-pics">
-                    <a class="pic-col pic-col-m"><img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/panel05.jpg?raw=true" /></a>
-                    <div class="pic-col pic-col-s">
-                        <a class="pic-row"><img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/panel06.jpg?raw=true" /></a>
-                        <a class="pic-row"><img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/panel07.jpg?raw=true" /></a>
-                    </div>
-                    <a class="pic-col pic-col-l"><img src="https://github.com/JessicaPotter2/foodWebsite/blob/master/images/panel08.jpg?raw=true" /></a>
-                </div>
-            </div>*@
-
         <hr />
         <footer>
-            <div class="public-footer">
-                <div class="public-container">
-                    <div class="footer-col">
-                        <p>New York Restaurant<br /> 3926 Anmoore Road<br /> New York, NY 10014<br /><a href="tel:718-749-1714" class="footer-tel">718-749-1714</a></p>
-                    </div>
-                    <div class="footer-col">
-                        <p>France Restaurant<br /> 68, rue  de la Couronne<br /> 75002 PARIS<br />02.94.23.69.56</p>
-                    </div>
-                    <div class="footer-col">
-                        <a href="#">Blog</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Privacy Policy</a>
-                        <a>Contact</a>
-                    </div>
-                    <div class="footer-col footer-col-nor">
-                        <div class="footer-logo"></div>
-                        <div class="footer-info">
-                            <p>&copy; @DateTime.Now.Year - HONASTEAK</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 data-bs-target="#collapse_1">Quick Links</h3>
+                        <div class="collapse dont-collapse-sm links" id="collapse_1">
+                            <ul>
+                                <li><a href="submit-rider.html">Become a Rider</a></li>
+                                <li><a href="submit-restaurant.html">Add your restaurant</a></li>
+                                <li><a href="help.html">Help</a></li>
+                                <li><a href="account.html">My account</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                            </ul>
                         </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 data-bs-target="#collapse_2">Categories</h3>
+                        <div class="collapse dont-collapse-sm links" id="collapse_2">
+                            <ul>
+                                <li><a href="grid-listing-filterscol.html">Top Categories</a></li>
+                                <li><a href="grid-listing-filterscol-full-masonry.html">Best Rated</a></li>
+                                <li><a href="grid-listing-filterscol-full-width.html">Best Price</a></li>
+                                <li><a href="grid-listing-filterscol-full-masonry.html">Latest Submissions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 data-bs-target="#collapse_3">Contacts</h3>
+                        <div class="collapse dont-collapse-sm contacts" id="collapse_3">
+                            <ul>
+                                <li><i class="icon_house_alt"></i>97845 Baker st. 567<br>Los Angeles - US</li>
+                                <li><i class="icon_mobile"></i>+94 423-23-221</li>
+                                <li><i class="icon_mail_alt"></i><a href="#0">info@domain.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 data-bs-target="#collapse_4">Keep in touch</h3>
+                        <div class="collapse dont-collapse-sm" id="collapse_4">
+                            <div id="newsletter">
+                                <div id="message-newsletter"></div>
+                                <form method="post" action="assets/newsletter.php" name="newsletter_form" id="newsletter_form">
+                                    <div class="form-group">
+                                        <input type="email" name="email_newsletter" id="email_newsletter" class="form-control" placeholder="Your email">
+                                        <button type="submit" id="submit-newsletter"><i class="arrow_carrot-right"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="follow_us">
+                                <h5>Follow Us</h5>
+                                <ul>
+                                    <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/twitter_icon.svg" alt="" class="lazy"></a></li>
+                                    <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/facebook_icon.svg" alt="" class="lazy"></a></li>
+                                    <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/instagram_icon.svg" alt="" class="lazy"></a></li>
+                                    <li><a href="#0"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/youtube_icon.svg" alt="" class="lazy"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row-->
+                <hr>
+                <div class="row add_bottom_25">
+                    <div class="col-lg-6">
+                        <ul class="footer-selector clearfix">
+                            <li>
+                                <div class="styled-select lang-selector">
+                                    <select>
+                                        <option value="English" selected>English</option>
+                                        <option value="Tiếng Việt">VietNamese</option>
+
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="styled-select currency-selector">
+                                    <select>
+                                        <option value="US Dollars" selected>US Dollars</option>
+                                        <option value="Euro">Euro</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="img/cards_all.svg" alt="" width="198" height="30" class="lazy"></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="additional_links">
+                            <li><a href="#0">Terms and conditions</a></li>
+                            <li><a href="#0">Privacy</a></li>
+                            <li><span>&copy; @DateTime.Now.Year - HONASTEAK</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </footer>
+        <!--/footer-->
+    </div>
+   
+
+    <div id="toTop"></div><!-- Back to top button -->
+
+    <div class="layer"></div><!-- Opacity Mask Menu Mobile -->
+    <!-- Sign In Modal -->
+    <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
+        <div class="modal_header">
+            <h3>Sign In</h3>
+        </div>
+        <form>
+            <div class="sign-in-wrapper">
+                <a href="#0" class="social_bt facebook">Login with Facebook</a>
+                <a href="#0" class="social_bt google">Login with Google</a>
+                <div class="divider"><span>Or</span></div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                    <i class="icon_mail_alt"></i>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" id="password" value="">
+                    <i class="icon_lock_alt"></i>
+                </div>
+                <div class="clearfix add_bottom_15">
+                    <div class="checkboxes float-start">
+                        <label class="container_check">
+                            Remember me
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="float-end"><a id="forgot" href="#0">Forgot Password?</a></div>
+                </div>
+                <div class="text-center">
+                    <input type="submit" value="Log In" class="btn_1 full-width mb_5">
+                    Don’t have an account? <a href="account.html">Sign up</a>
+                </div>
+                <div id="forgot_pw">
+                    <div class="form-group">
+                        <label>Please confirm login email below</label>
+                        <input type="email" class="form-control" name="email_forgot" id="email_forgot">
+                        <i class="icon_mail_alt"></i>
+                    </div>
+                    <p>You will receive an email containing a link allowing you to reset your password to a new preferred one.</p>
+                    <div class="text-center"><input type="submit" value="Reset Password" class="btn_1"></div>
+                </div>
+            </div>
+        </form>
+        <!--form -->
+    </div>
+    <!-- /Sign In Modal -->
+    <!-- COMMON SCRIPTS -->
+    <script src="~/Content/js/common_scripts.min.js"></script>
+    <script src="~/Content/js/common_func.js"></script>
+    <script src="~/Content/assets/validate.js"></script>
+
+    <!-- COLOR SWITCHER  -->
+    <script src="~/Content/js/switcher.js"></script>
+    <div id="style-switcher">
+        <h6>Color Switcher <a href="#"><i class="icon_cog"></i></a></h6>
+        <div>
+            <ul class="colors" id="color1">
+                <li><a href="#" class="default" title="Default"></a></li>
+                <li><a href="#" class="aqua" title="Aqua"></a></li>
+                <li><a href="#" class="orange" title="Orange"></a></li>
+                <li><a href="#" class="beige" title="Beige"></a></li>
+                <li><a href="#" class="gray" title="Gray"></a></li>
+                <li><a href="#" class="green-2" title="Green"></a></li>
+                <li><a href="#" class="purple" title="Purple"></a></li>
+                <li><a href="#" class="red" title="Red"></a></li>
+                <li><a href="#" class="violet" title="Violet"></a></li>
+            </ul>
+        </div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>
-<style>
-    .index-banner {
-        position: relative;
-        background: #b3b3b3;
-    }
-
-    .index-banner-bg {
-        height: 570px;
-        overflow: hidden;
-    }
-
-        .index-banner-bg img {
-            margin: 0 auto;
-        }
-
-    .index-banner-text {
-        position: absolute;
-        top: 200px;
-        left: 50%;
-        margin-left: -388px;
-    }
-
-        .index-banner-text .text-logo {
-            width: 776px;
-            height: 117px;
-            background: url("https://github.com/JessicaPotter2/foodWebsite/blob/master/images/text-logo.png?raw=true") no-repeat;
-        }
-
-        .index-banner-text .text-info {
-            margin-top: 17px;
-            text-align: center;
-            color: #fff;
-        }
-
-            .index-banner-text .text-info .line {
-                display: inline-block;
-                width: 40px;
-                border-top: 1px solid #fff;
-                vertical-align: middle;
-                *margin-top: 22px;
-            }
-
-            .index-banner-text .text-info .text {
-                margin: 0 26px;
-            }
-    /*菜单*/
-    .index-menu {
-        position: relative;
-        border-top: 4px solid #f34949;
-    }
-
-        .index-menu .menu-tips {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            margin-left: -78px;
-            width: 156px;
-            height: 75px;
-            text-align: center;
-            line-height: 65px;
-            color: #fff;
-            background: #f34949;
-        }
-
-            .index-menu .menu-tips:after {
-                position: absolute;
-                content: '';
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 0;
-                border-left: 78px solid transparent;
-                border-right: 78px solid transparent;
-                border-bottom: 10px solid #fff;
-            }
-
-        .index-menu .menu-list {
-            margin-top: 150px;
-            color: #555;
-            overflow: hidden;
-            *margin-bottom: 92px;
-        }
-
-            .index-menu .menu-list ul {
-                width: 1160px;
-            }
-
-        .index-menu .menu-item {
-            float: left;
-            width: 520px;
-            margin-right: 60px;
-            margin-bottom: 56px;
-        }
-
-            .index-menu .menu-item .title, .index-menu .menu-item .line {
-                float: left;
-            }
-
-            .index-menu .menu-item .price {
-                float: right;
-            }
-
-            .index-menu .menu-item .title {
-                width: 230px;
-                color: #555;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
-
-            .index-menu .menu-item .line {
-                margin-top: 10px;
-                width: 192px;
-                border-top: 1px solid #e3e1e1;
-            }
-
-            .index-menu .menu-item .comment {
-                margin-top: 4px;
-                color: #b7b7b7;
-                font-size: 12px;
-            }
-
-        .index-menu .menu-more-btn {
-            margin: 0 auto;
-            width: 114px;
-            height: 32px;
-            padding-left: 16px;
-            border: 1px solid #d7d5d5;
-            font-size: 14px;
-            line-height: 32px;
-            color: #b7b7b7;
-        }
-
-            .index-menu .menu-more-btn .icon {
-                display: inline-block;
-                width: 11px;
-                height: 7px;
-                margin-left: 10px;
-                background: url("https://github.com/JessicaPotter2/foodWebsite/blob/master/images/more-button.png?raw=true");
-            }
-
-    .index-panel {
-        margin: 0 auto;
-        margin-top: 200px;
-        position: relative;
-        width: 1100px;
-    }
-
-    .inedx-panel-header {
-    }
-
-        .inedx-panel-header h3 {
-            float: left;
-            margin-right: 48px;
-            font-size: 20px;
-            color: #3b3b3b;
-            font-weight: normal;
-        }
-
-        .inedx-panel-header .line {
-            float: left;
-            margin-top: 10px;
-            width: 200px;
-            border-top: 1px solid #e5e3e3;
-        }
-
-        .inedx-panel-header .btn-group {
-            font-size: 0;
-            float: right;
-        }
-
-        .inedx-panel-header .btn {
-            display: inline-block;
-            margin-left: 11px;
-            width: 9px;
-            height: 9px;
-            background: #dedede;
-            border-radius: 50%;
-            -moz-border-radius: 50%;
-            -webkit-border-radius: 50%;
-        }
-
-        .inedx-panel-header .active {
-            background: #9b9b9b;
-        }
-
-    .index-panel-body {
-        margin-top: 75px;
-    }
-
-    .index-food-list {
-        overflow: hidden;
-    }
-
-        .index-food-list ul {
-            width: 1160px;
-        }
-
-        .index-food-list .food-item {
-            float: left;
-            width: 230px;
-            margin-right: 60px;
-        }
-
-            .index-food-list .food-item .banner {
-                margin-bottom: 30px;
-                height: 202px;
-            }
-
-            .index-food-list .food-item .name {
-                color: #555;
-                margin-bottom: 10px;
-            }
-
-            .index-food-list .food-item .star-bar {
-                font-size: 0;
-            }
-
-            .index-food-list .food-item .star {
-                display: inline-block;
-                width: 12px;
-                height: 13px;
-                margin-right: 5px;
-                background-image: url("https://github.com/JessicaPotter2/foodWebsite/blob/master/images/star.png?raw=true");
-                background-repeat: no-repeat;
-            }
-
-            .index-food-list .food-item .no-star {
-                background-position: 0 -13px;
-            }
-
-            .index-food-list .food-item .price {
-                float: right;
-            }
-
-    .index-pics {
-        height: 380px;
-        overflow: hidden;
-    }
-
-        .index-pics .pic-col {
-            float: left;
-        }
-
-        .index-pics .pic-col-l {
-            width: 460px;
-        }
-
-        .index-pics .pic-col-m {
-            width: 352px;
-        }
-
-        .index-pics .pic-col-s {
-            width: 288px
-        }
-
-    .public-header {
-        height: 110px;
-    }
-
-        .public-header .header-logo {
-            margin-top: 40px;
-            float: left;
-        }
-
-            .public-header .header-logo a {
-                width: 182px;
-                height: 54px;
-                background: url("https://github.com/JessicaPotter2/foodWebsite/blob/master/images/index-header-logo.png?raw=true") no-repeat;
-            }
-
-        .public-header .header-nav a:hover {
-            text-decoration: underline;
-        }
-
-        .public-header .header-nav {
-            float: right;
-            font-size: 14px;
-        }
-
-            .public-header .header-nav .item {
-                float: left;
-                margin-top: 44px;
-                margin-left: 44px;
-            }
-
-            .public-header .header-nav a {
-                color: #3b3b3b;
-            }
-
-    .public-container {
-        position: relative;
-        margin: 0 auto;
-        width: 1100px;
-    }
-
-    .public-footer {
-        height: 218px;
-        padding-top: 100px;
-        margin-top: 200px;
-        background: #3b3b3b;
-    }
-
-        .public-footer .footer-col {
-            width: 230px;
-            float: left;
-            margin-right: 60px;
-            font-size: 16px;
-            color: #fff;
-            line-height: 1.8;
-        }
-
-        .public-footer .footer-col-nor {
-            margin-right: 0;
-        }
-
-        .public-footer .footer-logo {
-            width: 182px;
-            height: 55px;
-            margin-top: -15px;
-            margin-bottom: 12px;
-            background: url("https://github.com/JessicaPotter2/foodWebsite/blob/master/images/index-footer-logo.png?raw=true") no-repeat;
-        }
-
-    .footer-info a {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: bold;
-    }
-</style>
